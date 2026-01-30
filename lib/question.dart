@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 class Question extends StatelessWidget {
   final String questionText;
+
   const Question(this.questionText, {Key? key}) : super(key: key);
 
   @override
@@ -13,7 +14,7 @@ class Question extends StatelessWidget {
         questionText,
         style: const TextStyle(fontSize: 28),
         textAlign: TextAlign.center,
-      ),
-    );
+      ), //Text
+    ); //Container
   }
 }

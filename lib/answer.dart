@@ -1,24 +1,27 @@
 import 'package:flutter/material.dart';
 
 class Answer extends StatelessWidget {
-  final Function selectHandler;
+  final VoidCallback selectHandler;
   final String answerText;
 
   const Answer({
     Key? key,
     required this.selectHandler,
-    required this.answerText
+    required this.answerText,
   }) : super(key: key);
 
-    @override
+  @override
   Widget build(BuildContext context) {
-    // TODO: implement build
     return SizedBox(
       width: double.infinity,
-      child: ElevatedButton(onPressed: ()=> selectHandler, style: ElevatedButton.styleFrom(
-        backgroundColor: Colors.green, foregroundColor: Colors.white
+      child: ElevatedButton(
+        onPressed: selectHandler,
+        style: ElevatedButton.styleFrom(
+          backgroundColor: Colors.pink[300],
+          foregroundColor: Colors.black,
+        ),
+        child: Text(answerText),
       ),
-      child: Text(answerText),),
-    )
+    );
   }
 }
